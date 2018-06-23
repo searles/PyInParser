@@ -191,7 +191,7 @@ class TokenParser(NamedUnit):
         code.beginBlock(NamedUnit.signature(self, inputVars, streamVar))
         code.addLine("CharSequence " +
                      tokenSequenceVarName + " = " +
-                     self.token.name + ".parseToken(" + streamVar+ ", null);")
+                     self.token.name + ".parseToken(" + streamVar+ ");")
 
         code.beginBlock("if(" + tokenSequenceVarName + " != null)")
 

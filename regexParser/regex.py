@@ -14,7 +14,6 @@ code.addLine("package " + packageName + ";\n")
 code.addLine("import at.searles.parsing.lexer.Lexer;")
 code.addLine("import at.searles.parsing.lexer.TokStream;")
 code.addLine("import at.searles.parsing.lexer.Token;")
-code.addLine("import at.searles.parsing.lexer.TokenSet;")
 code.addLine("import at.searles.parsing.regex.CharSet;")
 code.addLine("import at.searles.parsing.regex.Regex;")
 
