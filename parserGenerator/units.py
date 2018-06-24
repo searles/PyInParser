@@ -155,7 +155,7 @@ class HiddenToken:
         self.regex = regex
 
     def declare(self, code):
-        code.addLine("public final Token " + self.name + " = " + self.lexer.name + ".hidden(" + self.regex + ");")
+        code.addLine("public final Token " + self.name + " = " + self.lexer.name + ".hiddenToken(" + self.regex + ");")
         return self
 
 class Token(NamedUnit):
@@ -167,7 +167,7 @@ class Token(NamedUnit):
 
     def call(self, inputVars, stream):
         # This one has a special call.
-        return self.name + ".recognizeToken(" + stream + ", null)"
+        return self.name + ".recognizeToken(" + stream + ")"
 
     def declare(self, code):
         code.addLine("public final Token " + self.name + " = " + self.lexer.name + ".token(" + self.regex + ");")
